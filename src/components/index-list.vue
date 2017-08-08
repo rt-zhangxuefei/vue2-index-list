@@ -5,7 +5,8 @@
         <h3 class="index-group-title">{{group.title}}</h3>
         <ul>
           <li @click="clickItem(item)" v-for="(item,index) in group.items" :key="index" class="index-group-item">
-            <img v-lazy="item.avatar" class="avatar" alt="">
+            <img v-if="useLazyLoad" v-lazy="item.avatar" class="avatar" alt="">
+            <img v-else :src="item.avatar" class="avatar" alt="">
             <span class="name">{{item.name}}</span>
           </li>
         </ul>
@@ -16,7 +17,7 @@
         <li v-for="(item,index) in indexList" :key="index" @touchstart.prevent="_onTouchStartIndex(index)" :data-index="index" class="nav-item" :class="{'active':currentIndex===index}">{{item}}</li>
       </ul>
     </div>
-    <transition :duration="1000">
+    <transition name="fade">
       <div class="index-indicator" v-show="moving">{{currentIndicator}}</div>
     </transition>
   </div>
@@ -32,6 +33,10 @@ export default {
     data: {
       type: Array,
       default: []
+    },
+    useLazyLoad: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -130,6 +135,7 @@ export default {
       display:flex
       align-items:center
       padding:20px 0 0 30px
+      list-style:none
       .avatar
         width:50px
         height:50px
@@ -153,6 +159,7 @@ export default {
         padding:3px
         font-size:12px
         color:rgba(255,255,255,0.5)
+        list-style:none
         &.active
           color:#ffcd32
     .index-indicator
@@ -169,4 +176,8 @@ export default {
       font-size:22px
       border-radius:5px
       pointer-events:none
+  .fade-enter-active, .fade-leave-active
+    transition: opacity .5s
+  .fade-enter, .fade-leave-to
+    opacity: 0
 </style>
