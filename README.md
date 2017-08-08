@@ -31,3 +31,6 @@
 # 注意事项（Attention）
 * 包裹组件的父级元素必须设置fixed定位，这里滚动是原生的overflow:auto，样式控制需要使用者自己做些调整
 * data的数据格式严格遵循根目录testData.json里面的格式，当然你也可以修改源码来实现自己的格式
+
+# 演示效果
+<img src="http://cdn.zhangxuefei.site/wp-content/uploads/2017/08/vue2-index-list.gif">
