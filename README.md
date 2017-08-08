@@ -1,6 +1,6 @@
 # vue2-index-list
 
-> it is a usefull index-list component based on vue2<br/>基于vue2.x实现的一个类似通讯录的展示组件，带索引高亮联动效果，使用时请看下注意事项
+> it is a usefull index-list component based on vue2.x<br/>基于vue2.x实现的一个类似通讯录的展示组件，带索引高亮联动效果，使用时请看下注意事项
 
 # 立即使用（How to use)
 > 引入src/components/index-list.vue组件
