@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="wrap">
-      <index-list :data="playerList" v-if="playerList.length"></index-list>
+      <index-list :data="playerList" @choose="onChoose" v-if="playerList.length"></index-list>
     </div>
   </div>
 </template>
@@ -14,6 +14,11 @@ export default {
   data() {
     return {
       playerList: [/*test data in testData.json*/]
+    }
+  },
+  methods: {
+    onChoose(item) {
+      console.log(item)
     }
   },
   components: {
