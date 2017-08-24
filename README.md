@@ -43,4 +43,4 @@
 > 涉及到多张图片加载，建议引入组件vue-lazyload，并且设置useLazyLoad:true
 
 # 演示效果
-[http://cdn.zhangxuefei.site/wp-content/uploads/2017/08/vue2-index-list.gif]
+![预览地址](http://cdn.zhangxuefei.site/wp-content/uploads/2017/08/vue2-index-list.gif)
