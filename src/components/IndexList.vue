@@ -127,6 +127,7 @@ export default {
   .index-list-wrap {
     height: 100%;
     overflow: auto;
+	-webkit-overflow-scrolling: touch; //#issue-368550974
   }
 
   .index-group {
